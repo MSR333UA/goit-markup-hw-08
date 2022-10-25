@@ -5,10 +5,28 @@
 
 .footer__holder {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+
+
+    @media screen and (min-width: 768px) {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    @media screen and (min-width: 1200px) {
+        display: flex;
+        justify-content: space-between;
+        text-align: start;
+    }
 }
 
-.footer__address {}
 
 .logo-part--black {
     color: $bg-color;
@@ -18,8 +36,15 @@
     @extend %list;
     margin-top: 20px;
     display: flex;
-    gap: 9px;
+    gap: 8px;
     flex-direction: column;
+
+
+    @media screen and (min-width: 768px) {}
+
+    @media screen and (min-width: 1200px) {
+        gap: 9px;
+    }
 }
 
 .address__link {
@@ -36,31 +61,56 @@
     }
 }
 
-.address__link--white {
+.address__map {
+    @extend %list;
+
+    color: $contact-footer-color;
+    font-style: normal;
+    line-height: 1.71;
+    transition: color $time $timing-function;
+
     color: $bg-color;
 }
 
 .footer__title {
     font-weight: 700;
-    margin: 12px 0 20px;
+    margin: 60px 0 20px;
+
     font-size: 14px;
     line-height: calc(16 / 14);
     text-transform: uppercase;
     color: $bg-color;
+
+    @media screen and (min-width: 768px) {}
+
+    @media screen and (min-width: 1200px) {
+        margin: 12px 0 20px;
+
+    }
 }
 
 .sign-up {
     display: flex;
-    gap: 12px;
+    flex-direction: column;
+    align-items: center;
+
+    @media screen and (min-width: 1200px) {
+        display: flex;
+        gap: 12px;
+    }
 }
 
 .sing-up__title {
-    margin: 12px 0 20px;
+    margin: 60px 0 20px;
 
     font-weight: 700;
     line-height: calc(16/14);
     text-transform: uppercase;
     color: $bg-color;
+
+    @media screen and (min-width: 1200px) {
+        margin: 12px 0 20px;
+    }
 }
 
 .sing-up__textbox {

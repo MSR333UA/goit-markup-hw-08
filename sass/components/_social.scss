@@ -2,7 +2,15 @@
     @extend %list;
     display: flex;
     justify-content: space-between;
-    padding: 0 32px;
+    padding: 0 122px;
+
+    @media screen and (min-width: 768px) {
+        padding: 0 74px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        padding: 0 32px;
+    }
 }
 
 .social__link {
@@ -18,8 +26,8 @@
 
     &:hover,
     &:focus {
-    fill: $bg-color;
-    background-color: $link-hover-color;
+        fill: $bg-color;
+        background-color: $link-hover-color;
     }
 }
 
@@ -28,12 +36,22 @@
 }
 
 .social--footer {
-    display: flex;
-    gap: 10px;
     padding: 0;
+
+    gap: 10px;
+
+    @media screen and (min-width: 768px) {
+        gap: 10px;
+        padding: 0;
+    }
+
+    @media screen and (min-width: 1200px) {
+        gap: 10px;
+        padding: 0;
+    }
 }
 
 .social__link--color {
-     fill: $bg-color;
+    fill: $bg-color;
     background: rgba(255, 255, 255, 0.1);
 }

@@ -1,7 +1,15 @@
 .company {
     @extend %list;
     display: flex;
-    justify-content: space-between;
+   flex-wrap: wrap;
+   gap: 30px;
+
+    @media screen and (min-width: 768px) {
+        
+    }
+   @media screen and (min-width: 1200px) {
+     justify-content: space-between;
+   }
 }
 
 .company__link {
@@ -11,8 +19,9 @@
 
     fill: $svg-color;
     border: 1px solid $svg-color;
-    width: 170px;
+    width: 210px;
     height: 92px;
+    
     border-radius: 4px;
     cursor: pointer;
     transition: border $time $timing-function;
@@ -21,5 +30,14 @@
     &:focus {
         fill: $link-hover-color;
         border-color: $link-hover-color;
+    }
+
+    @media screen and (min-width: 768px) {
+        width: 226px;
+height: 92px;
+    }
+    @media screen and (min-width: 1200px) {
+width: 170px;
+    height: 92px;
     }
 }

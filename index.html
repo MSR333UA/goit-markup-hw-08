@@ -24,7 +24,13 @@
       <div class="header container">
         <nav class="header-nav">
           <a class="logo" lang="en" href="./index.html">Web<span class="logo-part">Studio</span></a>
-          <ul class="site-nav">
+          <button class="menu__toggle js-open-menu" type="button">
+            <svg width="40" height="40" aria-label="Перемикач мобільного меню">
+              <use class="menu__icon-cross" href="./images/symbol-defs.svg#icon-close_40px"></use>
+              <use class="menu__icon-menu" href="./images/symbol-defs.svg#icon-menu"></use>
+            </svg>
+          </button>
+          <ul class="site-nav menu">
             <li class="site-nav__item">
               <a class="site-nav__link site-nav__link--active" href="./index.html">Студія</a>
             </li>
@@ -36,7 +42,7 @@
             </li>
           </ul>
         </nav>
-        <ul class="contact">
+        <ul class="contact menu">
           <li class="contact__item">
             <a class="contact__link" href="mailto:info@devstudio.com">
               <svg class="contac__icon" width="16" height="12">
@@ -57,13 +63,16 @@
     <!-- Унікальний контент -->
     <main>
       <!-- Рішення для бізнесу -->
+
       <section class="hero">
         <div class="container">
           <h1 class="hero__title">Ефективні рішення для вашого бізнесу</h1>
           <button data-modal-open class="button" type="button">Замовити послугу</button>
         </div>
       </section>
+
       <!-- Наші переваги -->
+
       <section class="sections sections--advantages">
         <div class="container">
           <h2 class="visually-hidden">Наші переваги</h2>
@@ -115,8 +124,10 @@
           </ul>
         </div>
       </section>
+
       <!-- Чим ми займаємося -->
-      <section class="sections">
+
+      <!-- <section class="sections">
         <div class="container">
           <h2 class="section-title">Чим ми займаємося</h2>
           <ul class="features__items">
@@ -138,8 +149,10 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> -->
+
       <!-- Наша команда -->
+
       <section class="sections sections--team">
         <div class="container">
           <h2 class="section-title">Наша команда</h2>
@@ -280,7 +293,9 @@
           </ul>
         </div>
       </section>
+
       <!-- Постійні клієнти -->
+
       <section class="sections">
         <div class="container">
           <h2 class="section-title">Постійні клієнти</h2>
@@ -338,7 +353,7 @@
             <ul class="address">
               <li class="address__list">
                 <a
-                  class="address__link address__link--white"
+                  class="address__map"
                   href="https://goo.gl/maps/CPtrU1FHBa2aNyZL9"
                   target="_blank"
                   rel="noopener noreferrer nofollow"
@@ -405,7 +420,7 @@
 
     <!-- Модельне вікно -->
 
-    <div class="backdrop is-hidden" data-modal>
+    <!-- <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button class="close-button" data-modal-close>
           <svg class="close-button__icon" width="18" height="18">
@@ -453,15 +468,39 @@
               <use href="./images/symbol-defs.svg#icon-check"></use>
             </svg>
           </span>
-          <p class="checkbox__text">
+          <span class="checkbox__text">
             Погоджуюся з розсилкою та приймаю
             <a class="checkbox__link" href="#">Умови договору</a>
-          </p>
+          </span>
         </label>
 
         <button class="button button--size" type="submit">Відправити</button>
       </div>
+    </div> -->
+
+    <div class="menu__container js-menu-container" id="menu__mobile">
+      <button class="menu__toggle js-close-menu">
+        <svg <svg width="40" height="40" aria-label="Перемикач мобільного меню">
+          <use class="menu__icon-cross" href="./images/symbol-defs.svg#icon-close_40px"></use>
+          <use class="menu__icon-menu" href="./images/symbol-defs.svg#icon-menu"></use>
+        </svg>
+      </button>
+
+      <ul class="menu-mobile">
+        <li><a class="menu-mobile__link" href="./index.html">Студія</a></li>
+        <li><a class="menu-mobile__link" href="./portfolio.html">Портфоліо</a></li>
+        <li><a class="menu-mobile__link" href="#">Контакти</a></li>
+      </ul>
+      <ul class="menu-mobile__contact">
+        <li class="menu-mobile__item">
+          <a class="menu-mobile__link" href="mailto:info@devstudio.com"> info@devstudio.com</a>
+        </li>
+        <li class="menu-mobile__item">
+          <a class="menu-mobile__link" href="tel:+380961111111"> >+38 096 111 11 11</a>
+        </li>
+      </ul>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
