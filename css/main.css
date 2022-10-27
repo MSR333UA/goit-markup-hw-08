@@ -778,8 +778,10 @@ svg {
   }
 }
 
-.company__itam {
-  width: calc(100% - 60px)/2;
+@media screen and (max-width: 767px) {
+  .company__itam {
+    width: calc((100% - 30px) / 2);
+  }
 }
 
 .company__link {
@@ -788,7 +790,6 @@ svg {
   justify-content: center;
   fill: #AFB1B8;
   border: 1px solid #AFB1B8;
-  width: 210px;
   height: 92px;
   border-radius: 4px;
   cursor: pointer;
