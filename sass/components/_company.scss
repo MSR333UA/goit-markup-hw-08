@@ -1,15 +1,14 @@
 .company {
     @extend %list;
     display: flex;
-   flex-wrap: wrap;
-   gap: 30px;
+    flex-wrap: wrap;
+    gap: 30px;
 
-    @media screen and (min-width: 768px) {
-        
+    @media screen and (min-width: 768px) {}
+
+    @media screen and (min-width: 1200px) {
+        justify-content: space-between;
     }
-   @media screen and (min-width: 1200px) {
-     justify-content: space-between;
-   }
 }
 
 .company__link {
@@ -21,7 +20,7 @@
     border: 1px solid $svg-color;
     width: 210px;
     height: 92px;
-    
+
     border-radius: 4px;
     cursor: pointer;
     transition: border $time $timing-function;
@@ -34,10 +33,11 @@
 
     @media screen and (min-width: 768px) {
         width: 226px;
-height: 92px;
+        height: 92px;
     }
+
     @media screen and (min-width: 1200px) {
-width: 170px;
-    height: 92px;
+        width: 170px;
+        height: 92px;
     }
 }

@@ -1,4 +1,8 @@
 .backdrop {
+    display: none;
+
+    @media screen and (min-width: 768px) {
+    display: contents;
     position: relative;
     position: fixed;
     top: 0;
@@ -15,8 +19,8 @@
     pointer-events: none;
     padding: 0;
     }
+    }
 }
-
 
 .backdrop--is-hidden {
     &.modal {
@@ -25,7 +29,10 @@
 }
 
 .modal {
-    display: flex;
+    display: none;
+
+       @media screen and (min-width: 768px) {
+        display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -42,6 +49,7 @@
     border-radius: 4px;
 
      transition: transform $time $timing-function;
+    }
 }
 
 .modal__title {

@@ -1,7 +1,7 @@
 .button {
   cursor: pointer;
   border: none;
-  width: 216px;
+  width: 200px;
   height: 50px;
   padding: 0;
 
@@ -21,6 +21,10 @@
     color: $bg-color;
     background-color: #188CE8;
   }
+
+  @media screen and (min-width: 1200px) {
+    width: 216px;
+  }
 }
 
 .button--icon {
@@ -35,9 +39,9 @@
 
   fill: $bg-color;
 
-     @media screen and (min-width: 1200px) {
-            margin-top: 48px;
-    }
+  @media screen and (min-width: 1200px) {
+    margin-top: 48px;
+  }
 }
 
 .button--size {

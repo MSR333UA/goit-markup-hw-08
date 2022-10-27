@@ -10,26 +10,18 @@
     justify-content: center;
     text-align: center;
 
-
-
     @media screen and (min-width: 768px) {
         display: flex;
         flex-wrap: wrap;
         flex-direction: row;
-        align-items: center;
-        justify-content: center;
+        align-items: normal;
+        justify-content: space-around
     }
-
     @media screen and (min-width: 1200px) {
         display: flex;
         justify-content: space-between;
         text-align: start;
     }
-}
-
-
-.logo-part--black {
-    color: $bg-color;
 }
 
 .address {
@@ -38,9 +30,6 @@
     display: flex;
     gap: 8px;
     flex-direction: column;
-
-
-    @media screen and (min-width: 768px) {}
 
     @media screen and (min-width: 1200px) {
         gap: 9px;
@@ -81,11 +70,12 @@
     text-transform: uppercase;
     color: $bg-color;
 
-    @media screen and (min-width: 768px) {}
+    @media screen and (min-width: 768px) {
+        margin: 5px 0 20px;
+    }
 
     @media screen and (min-width: 1200px) {
         margin: 12px 0 20px;
-
     }
 }
 
@@ -96,6 +86,7 @@
 
     @media screen and (min-width: 1200px) {
         display: flex;
+        flex-direction: row;
         gap: 12px;
     }
 }
@@ -114,7 +105,7 @@
 }
 
 .sing-up__textbox {
-    width: 358px;
+    width: 450px;
     height: 50px;
     cursor: pointer;
     padding-left: 16px;
@@ -126,15 +117,19 @@
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
 
-
     &::placeholder {
         font-size: 16px;
         line-height: calc(20/16);
         color: rgba(255, 255, 255, 0.6);
     }
-
     &:hover,
     &:focus {
         border-color: $link-hover-color;
     }
+
+    @media screen and (min-width: 1200px) {
+        width: 358px;
+        height: 50px;
+    }
+  
 }
