@@ -168,7 +168,19 @@
           <h2 class="section-title">Наша команда</h2>
           <ul class="card">
             <li class="card__team">
-              <img src="./images/img.pg" alt="Product Designer" width="270" />
+              <img
+                srcset="
+                  ./images/team1.jpg        1x,
+                  ./images/team1@2x.jpg     2x,
+                  ./images/1team768.jpg     1x,
+                  ./images/1team768@2x.jpg  2x,
+                  ./images/1team1600.jpg    1x,
+                  ./images/1team1600@2x.jpg 2x
+                "
+                src="./images/team1.jpg"
+                alt="Product Designer"
+                width="450"
+              />
               <div class="card__desc">
                 <h3 class="card__name">Ігор Дем'яненко</h3>
                 <p class="card__text" lang="en">Product Designer</p>
@@ -201,7 +213,19 @@
               </div>
             </li>
             <li class="card__team">
-              <img src="./images/img1.jpg" alt="Frontend Developer" width="270" />
+              <img
+                srcset="
+                  ./images/team2.jpg        1x,
+                  ./images/team2@2x.jpg     2x,
+                  ./images/2team768.jpg     1x,
+                  ./images/2team768@2x.jpg  2x,
+                  ./images/2team1600.jpg    1x,
+                  ./images/2team1600@2x.jpg 2x
+                "
+                src="./images/team2.jpg"
+                alt="Frontend Developer"
+                width="450"
+              />
               <div class="card__desc">
                 <h3 class="card__name">Ольга Рєпіна</h3>
                 <p class="card__text" lang="en">Frontend Developer</p>
@@ -234,7 +258,19 @@
               </div>
             </li>
             <li class="card__team">
-              <img src="./images/img2.jpg" alt="Marketing" width="270" />
+              <img
+                srcset="
+                  ./images/team3.jpg        1x,
+                  ./images/team3@2x.jpg     2x,
+                  ./images/3team768.jpg     1x,
+                  ./images/3team768@2x.jpg  2x,
+                  ./images/3team1600.jpg    1x,
+                  ./images/3team1600@2x.jpg 2x
+                "
+                src="./images/team3.jpg"
+                alt="Marketing"
+                width="450"
+              />
               <div class="card__desc">
                 <h3 class="card__name">Микола Тарасов</h3>
                 <p class="card__text" lang="en">Marketing</p>
@@ -268,7 +304,19 @@
             </li>
 
             <li class="card__team">
-              <img src="./images/img3.jpg" alt="UI Designer" width="270" />
+              <img
+                srcset="
+                  ./images/team4.jpg        1x,
+                  ./images/team4@2x.jpg     2x,
+                  ./images/4team768.jpg     1x,
+                  ./images/4team768@2x.jpg  2x,
+                  ./images/4team1600.jpg    1x,
+                  ./images/4team1600@2x.jpg 2x
+                "
+                src="./images/team4.jpg"
+                alt="UI Designer"
+                width="450"
+              />
               <div class="card__desc">
                 <h3 class="card__name">Михайло Єрмаков</h3>
                 <p class="card__text" lang="en">UI Designer</p>
@@ -430,7 +478,7 @@
 
     <!-- Модельне вікно -->
 
-    <!-- <div class="backdrop is-hidden" data-modal>
+    <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button class="close-button" data-modal-close>
           <svg class="close-button__icon" width="18" height="18">
@@ -486,7 +534,7 @@
 
         <button class="button button--size" type="submit">Відправити</button>
       </div>
-    </div> -->
+    </div>
 
     <div class="menu__container js-menu-container" id="menu__mobile">
       <button class="menu__toggle js-close-menu">
@@ -497,18 +545,30 @@
       </button>
 
       <ul class="menu-mobile">
-        <li><a class="menu-mobile__link" href="./index.html">Студія</a></li>
-        <li><a class="menu-mobile__link" href="./portfolio.html">Портфоліо</a></li>
-        <li><a class="menu-mobile__link" href="#">Контакти</a></li>
-      </ul>
-      <ul class="menu-mobile__contact">
-        <li class="menu-mobile__item">
-          <a class="menu-mobile__link" href="mailto:info@devstudio.com"> info@devstudio.com</a>
+        <li>
+          <a class="menu-mobile__list menu-mobile__list--active" href="./index.html">Студія</a>
         </li>
-        <li class="menu-mobile__item">
-          <a class="menu-mobile__link" href="tel:+380961111111"> >+38 096 111 11 11</a>
-        </li>
+        <li><a class="menu-mobile__list" href="./portfolio.html">Портфоліо</a></li>
+        <li><a class="menu-mobile__list" href="#">Контакти</a></li>
       </ul>
+      <div class="contact-box">
+        <ul class="contact-mobile">
+          <li class="contact-mobile__item">
+            <a class="contact-mobile__link contact-mobile__link--number" href="tel:+380961111111"
+              >+38 096 111 11 11</a
+            >
+          </li>
+          <li class="contact-mobile__item">
+            <a class="contact-mobile__link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+          </li>
+        </ul>
+        <ul class="menu-social">
+          <li><a class="menu-social__link" href="#">Instagram</a> <span class="element"></span></li>
+          <li><a class="menu-social__link" href="#">Twitter</a><span class="element"></span></li>
+          <li><a class="menu-social__link" href="#">Facebook</a><span class="element"></span></li>
+          <li><a class="menu-social__link" href="#">LinkedIn</a></li>
+        </ul>
+      </div>
     </div>
     <script src="./js/modal.js"></script>
     <script src="./js/mobile-menu.js"></script>

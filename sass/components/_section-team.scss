@@ -30,24 +30,21 @@
 .card__team {
     background-color: $bg-color;
 
-    &:not(:first-child) {
+     @media screen and (max-width: 767px){
+&:not(:first-child) {
         margin-top: 30px;
     }
-
+     }
     @media screen and (min-width: 768px) {
         width: 354px;
 
-        &:not(:first-child) {
-            margin-top: 0;
-        }
+      
     }
 
     @media screen and (min-width: 1200px) {
         width: 270px;
 
-        &:not(:first-child) {
-            margin-top: 0;
-        }
+       
     }
 }
 
