@@ -107,7 +107,7 @@ svg {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   padding: 48px 40px;
   background-color: #FFFFFF;
@@ -166,7 +166,6 @@ svg {
 
 .menu-social {
   display: flex;
-  flex-direction: row;
 }
 .menu-social__link {
   font-weight: 500;
@@ -346,7 +345,7 @@ svg {
   margin-left: auto;
   margin-right: auto;
   background-position: center;
-  max-width: 480px;
+  max-width: 767px;
   min-width: 320px;
   padding: 118px 0;
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/header.jpg");
@@ -359,25 +358,24 @@ svg {
     background-image: url("../images/header@2x.jpg");
   }
 }
-@media screen and (min-width: 481px) {
+@media screen and (min-width: 768px) {
   .hero {
-    max-width: 768px;
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/header768.jpg");
   }
 }
-@media screen and (min-width: 481px) and (min-device-pixel-ratio: 2), screen and (min-width: 481px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 481px) and (min-resolution: 192dpi), screen and (min-width: 481px) and (min-resolution: 2dppx) {
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
   .hero {
     background-image: url("../images/header768@2x.jpg");
   }
 }
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 1200px) {
   .hero {
     max-width: 1600px;
     padding: 200px 0;
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/header1600.jpg");
   }
 }
-@media screen and (min-width: 769px) and (min-device-pixel-ratio: 2), screen and (min-width: 769px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 769px) and (min-resolution: 192dpi), screen and (min-width: 769px) and (min-resolution: 2dppx) {
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
   .hero {
     background-image: url("../images/header1600@2x.jpg");
   }
@@ -712,18 +710,9 @@ svg {
 
 .social {
   display: flex;
-  justify-content: space-between;
-  padding: 0 122px;
-}
-@media screen and (min-width: 768px) {
-  .social {
-    padding: 0 74px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .social {
-    padding: 0 32px;
-  }
+  gap: 10px;
+  width: 100%;
+  justify-content: center;
 }
 
 .social__link {
@@ -974,8 +963,7 @@ svg {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
-  min-width: 528px;
-  min-height: 581px;
+  padding: 40px;
   background-color: #FFFFFF;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
@@ -988,6 +976,17 @@ svg {
   font-weight: 700;
   font-size: 20px;
   line-height: 1.15;
+}
+
+.form-box {
+  width: 370px;
+  height: 342px;
+}
+@media screen and (min-width: 1200px) {
+  .form-box {
+    width: 448px;
+    height: 342px;
+  }
 }
 
 .form {
@@ -1016,7 +1015,6 @@ svg {
 .form__field {
   outline: none;
   cursor: pointer;
-  width: 448px;
   height: 40px;
   padding-left: 42px;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -1057,7 +1055,6 @@ svg {
   cursor: pointer;
   resize: none;
   padding: 12px 18px;
-  width: 448px;
   height: 120px;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   border: 1px solid rgba(33, 33, 33, 0.2);

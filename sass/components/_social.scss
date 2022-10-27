@@ -1,16 +1,9 @@
 .social {
     @extend %list;
     display: flex;
-    justify-content: space-between;
-    padding: 0 122px;
-
-    @media screen and (min-width: 768px) {
-        padding: 0 74px;
-    }
-
-    @media screen and (min-width: 1200px) {
-        padding: 0 32px;
-    }
+    gap: 10px;
+    width: 100%;
+    justify-content: center;
 }
 
 .social__link {
