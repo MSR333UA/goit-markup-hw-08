@@ -81,7 +81,7 @@ svg {
 }
 
 .menu__container.is-open {
-  transform: translateX(0);
+  transform: translateY(0);
 }
 
 .menu__toggle .menu__icon-cross {
@@ -113,7 +113,7 @@ svg {
   padding: 48px 40px;
   background-color: #FFFFFF;
   z-index: 999;
-  transform: translateX(100%);
+  transform: translateY(100%);
   transition: transform 250ms ease-in-out;
 }
 @media screen and (min-width: 768px) {
@@ -157,9 +157,11 @@ svg {
 }
 .menu-mobile__list:hover, .menu-mobile__list:focus {
   color: #2196F3;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .menu-mobile__list--active {
   color: #2196F3;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .menu-mobile__list--active::after {
   content: " ";
@@ -446,16 +448,10 @@ svg {
   width: 200px;
   height: 50px;
   gap: 10px;
-  margin-top: 20px;
   justify-content: center;
   flex-direction: row-reverse;
   align-items: center;
   fill: #FFFFFF;
-}
-@media screen and (min-width: 1200px) {
-  .button--icon {
-    margin-top: 48px;
-  }
 }
 
 .button--size {
@@ -887,17 +883,35 @@ svg {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
+}
+@media screen and (min-width: 480px) {
+  .sign-up {
+    width: auto;
+  }
 }
 @media screen and (min-width: 1200px) {
   .sign-up {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: flex-start;
+  }
+}
+.sign-up__box {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-direction: column;
+  width: 100%;
+}
+@media screen and (min-width: 1200px) {
+  .sign-up__box {
+    display: flex;
+    flex-direction: row;
     gap: 12px;
   }
 }
-
-.sing-up__title {
+.sign-up__title {
   margin: 60px 0 20px;
   font-weight: 700;
   line-height: 1.1428571429;
@@ -905,13 +919,24 @@ svg {
   color: #FFFFFF;
 }
 @media screen and (min-width: 1200px) {
-  .sing-up__title {
+  .sign-up__title {
     margin: 12px 0 20px;
   }
 }
-
-.sing-up__textbox {
-  width: 450px;
+.sign-up__title {
+  margin: 60px 0 20px;
+  font-weight: 700;
+  line-height: 1.1428571429;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+@media screen and (min-width: 1200px) {
+  .sign-up__title {
+    margin: 12px 0 20px;
+  }
+}
+.sign-up__textbox {
+  width: 100%;
   height: 50px;
   cursor: pointer;
   padding-left: 16px;
@@ -923,18 +948,22 @@ svg {
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
 }
-.sing-up__textbox::placeholder {
+.sign-up__textbox::placeholder {
   font-size: 16px;
   line-height: 1.25;
   color: rgba(255, 255, 255, 0.6);
 }
-.sing-up__textbox:hover, .sing-up__textbox:focus {
+.sign-up__textbox:hover, .sign-up__textbox:focus {
   border-color: #2196F3;
 }
+@media screen and (min-width: 480px) {
+  .sign-up__textbox {
+    width: 450px;
+  }
+}
 @media screen and (min-width: 1200px) {
-  .sing-up__textbox {
+  .sign-up__textbox {
     width: 358px;
-    height: 50px;
   }
 }
 
@@ -976,6 +1005,18 @@ svg {
   border-radius: 4px;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+@media screen and (max-width: 480px) {
+  .modal {
+    width: 90%;
+    height: 609px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .modal {
+    width: 450px;
+    height: 609px;
+  }
+}
 @media screen and (min-width: 1200px) {
   .modal {
     width: 528px;
@@ -1010,18 +1051,28 @@ svg {
 .form:nth-child(-n+4) {
   gap: 4px;
 }
-
-.form__name {
+.form__icon {
   cursor: pointer;
-  font-size: 12px;
-  line-height: 1.1666666667;
-  letter-spacing: 0.01em;
-  color: #757575;
+  position: absolute;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  left: 12px;
 }
-
+.form__inner {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form__inner:hover .form__field, .form__inner:focus .form__field {
+  border: 1px solid #2196F3;
+}
+.form__inner:hover .form__icon, .form__inner:focus .form__icon {
+  fill: #2196F3;
+}
 .form__field {
   outline: none;
   cursor: pointer;
+  width: 100%;
   height: 40px;
   padding-left: 42px;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -1039,22 +1090,13 @@ svg {
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 }
-.form__field:hover, .form__field:focus {
-  border: 1px solid #2196F3;
-}
-.form__field:hover ~ .form__icon, .form__field:focus ~ .form__icon {
-  fill: #2196F3;
-}
 
-.form__icon {
+.form__name {
   cursor: pointer;
-  position: absolute;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  left: 12px;
-  top: 29px;
-}
-.form__icon:hover, .form__icon:focus {
-  fill: #2196F3;
+  font-size: 12px;
+  line-height: 1.1666666667;
+  letter-spacing: 0.01em;
+  color: #757575;
 }
 
 .form__textarea {

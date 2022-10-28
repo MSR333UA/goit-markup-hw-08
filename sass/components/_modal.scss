@@ -43,11 +43,21 @@
 
     transition: transform $time $timing-function;
 
+    @media screen and (max-width: 480px) {
+    width: 90%;
+    height: 609px;
+    }
+     @media screen and (min-width: 768px) {
+      width: 450px;
+        height: 609px;
+    }
     @media screen and (min-width: 1200px) {
         width: 528px;
         height: 581px;
     }
 }
+
+
 
 .form-box {
     width: 100%;
@@ -81,7 +91,64 @@
     &:nth-child(-n + 4) {
         gap: 4px;
     }
+
+    &__icon {
+        cursor: pointer;
+        position: absolute;
+
+        transition: fill $time $timing-function;
+        left: 12px;
+    }
+
+    &__inner {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &:hover .form__field,
+        &:focus .form__field {
+
+            border: 1px solid $link-hover-color;
+        }
+
+        &:hover .form__icon,
+        &:focus .form__icon {
+            fill: $link-hover-color;
+        }
+    }
+
+    &__field {
+        outline: none;
+        cursor: pointer;
+
+        width: 100%;
+        height: 40px;
+        padding-left: 42px;
+
+        transition: border-color $time $timing-function;
+        border: 1px solid rgba(33, 33, 33, 0.2);
+        border-radius: 4px;
+        background-color: $bg-color;
+
+        &:nth-child(6) {
+            height: 120px;
+            margin-bottom: 20px;
+        }
+
+        &::placeholder {
+            font-size: 12px;
+            line-height: calc(14/12);
+            letter-spacing: 0.01em;
+
+            color: rgba(117, 117, 117, 0.5);
+        }
+
+    }
+
 }
+
+
 
 .form__name {
     cursor: pointer;
@@ -90,58 +157,6 @@
     letter-spacing: 0.01em;
 
     color: $title-text-color;
-}
-
-
-.form__field {
-    outline: none;
-    cursor: pointer;
-
-    height: 40px;
-    padding-left: 42px;
-
-    transition: border-color $time $timing-function;
-    border: 1px solid rgba(33, 33, 33, 0.2);
-    border-radius: 4px;
-    background-color: $bg-color;
-
-    &:nth-child(6) {
-        height: 120px;
-        margin-bottom: 20px;
-    }
-
-    &::placeholder {
-        font-size: 12px;
-        line-height: calc(14/12);
-        letter-spacing: 0.01em;
-
-        color: rgba(117, 117, 117, 0.5);
-    }
-
-    &:hover,
-    &:focus {
-        border: 1px solid $link-hover-color;
-    }
-
-    &:hover~.form__icon,
-    &:focus~.form__icon {
-        fill: $link-hover-color;
-    }
-
-}
-
-.form__icon {
-    cursor: pointer;
-    position: absolute;
-
-    transition: fill $time $timing-function;
-    left: 12px;
-    top: 29px;
-
-    &:hover,
-    &:focus {
-        fill: $link-hover-color;
-    }
 }
 
 .form__textarea {
