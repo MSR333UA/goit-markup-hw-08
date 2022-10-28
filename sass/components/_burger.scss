@@ -113,10 +113,12 @@
   &:hover,
   &:focus {
     color: $link-hover-color;
+    transition: color $time $timing-function;
   }
 
   &--active {
     color: $link-hover-color;
+    transition: color $time $timing-function;
 
     &::after {
       content: ' ';
