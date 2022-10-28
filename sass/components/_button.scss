@@ -70,7 +70,7 @@
   &:hover,
   &:focus-within {
     fill: $link-hover-color;
-    transition: $time $timing-function;
+    transition: fill $time $timing-function;
   }
 }
 

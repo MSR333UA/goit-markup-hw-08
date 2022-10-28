@@ -37,30 +37,29 @@
     cursor: pointer;
     margin: 0;
     font-weight: 400;
-    line-height: calc(24/14);
+    font-size: 12px;
+    line-height: calc(14/12);
     letter-spacing: 0.03em;
-    font-size: 14px;
+   
+
+    @media screen and (min-width: 1200px)  {
+        font-size: 14px;
+        line-height: calc(24/14);
+    }
 }
-
-
 
 .checkbox__link {
     color: $link-hover-color;
 }
-
-
-
 
 .checkbox__desc:hover {
     transition: border-color $time $timing-function;
     border: 2px solid $link-hover-color;
 }
 
-
 .checkbox:checked+.checkbox__holder .checkbox__desc .checkbox__icon {
     opacity: 1;
 }
-
 
 .checkbox:checked+.checkbox__holder .checkbox__desc {
     transition: background-color $time $timing-function;

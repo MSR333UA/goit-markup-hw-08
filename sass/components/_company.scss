@@ -32,7 +32,9 @@
 
     border-radius: 4px;
     cursor: pointer;
-    transition: border $time $timing-function;
+    transition: border $time $timing-function, fill $time $timing-function;
+   
+
 
     &:hover,
     &:focus {

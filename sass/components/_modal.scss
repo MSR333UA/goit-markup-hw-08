@@ -12,20 +12,20 @@
     background-color: rgba(0, 0, 0, 0.2);
 
     &.is-hidden {
-    opacity: 0;
-    pointer-events: none;
-    padding: 0;
+        opacity: 0;
+        pointer-events: none;
+        padding: 0;
     }
 }
 
 .backdrop--is-hidden {
     &.modal {
         transform: translate(-50%, -50%) scale(0);
-    } 
+    }
 }
 
 .modal {
-        display: flex;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -34,35 +34,34 @@
     left: 50%;
     transform: translate(-50%, -50%) scale(1);
     padding: 40px;
-
+    width: 450px;
+    height: 609px;
 
     background-color: $bg-color;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
 
-     transition: transform $time $timing-function;
+    transition: transform $time $timing-function;
 
+    @media screen and (min-width: 1200px) {
+        width: 528px;
+        height: 581px;
     }
+}
 
+.form-box {
+    width: 100%;
+    height: 342px;
+}
 
 .modal__title {
     @extend %list;
-     text-align: center;
+    text-align: center;
     margin-bottom: 12px;
 
     font-weight: 700;
     font-size: 20px;
     line-height: calc(23/20);
-}
-
-.form-box {
-    width: 370px;
-    height: 342px;
-
-    @media screen and (min-width: 1200px) {
-        width: 448px;
-        height: 342px;
-    }
 }
 
 .form {
@@ -71,16 +70,17 @@
     flex-direction: column;
 
     &:nth-child(6) {
-    margin-bottom: 20px;
-}
+        margin-bottom: 20px;
+    }
 
-&:not(:last-child) {
-    margin-bottom: 10px;
+    &:not(:last-child) {
+        margin-bottom: 10px;
 
-}
+    }
+
     &:nth-child(-n + 4) {
-    gap: 4px;
-}
+        gap: 4px;
+    }
 }
 
 .form__name {
@@ -96,60 +96,60 @@
 .form__field {
     outline: none;
     cursor: pointer;
-  
-height: 40px;
-padding-left: 42px;
 
-transition: border-color $time $timing-function;
+    height: 40px;
+    padding-left: 42px;
+
+    transition: border-color $time $timing-function;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     background-color: $bg-color;
 
-&:nth-child(6) {
-    height: 120px;
-    margin-bottom: 20px;
-}
+    &:nth-child(6) {
+        height: 120px;
+        margin-bottom: 20px;
+    }
 
     &::placeholder {
-    font-size: 12px;
-    line-height: calc(14/12);
-    letter-spacing: 0.01em;
+        font-size: 12px;
+        line-height: calc(14/12);
+        letter-spacing: 0.01em;
 
-    color: rgba(117, 117, 117, 0.5);
-}
-&:hover,
-&:focus
- {
-    border: 1px solid $link-hover-color;
-}
-&:hover ~ .form__icon,
-&:focus ~ .form__icon {
-     fill: $link-hover-color;
-}
+        color: rgba(117, 117, 117, 0.5);
+    }
+
+    &:hover,
+    &:focus {
+        border: 1px solid $link-hover-color;
+    }
+
+    &:hover~.form__icon,
+    &:focus~.form__icon {
+        fill: $link-hover-color;
+    }
 
 }
 
 .form__icon {
-     cursor: pointer;
-     position: absolute;
+    cursor: pointer;
+    position: absolute;
 
-     transition: fill $time $timing-function;
+    transition: fill $time $timing-function;
     left: 12px;
     top: 29px;
 
-   &:hover,
-&:focus
- {
-   fill: $link-hover-color;
+    &:hover,
+    &:focus {
+        fill: $link-hover-color;
     }
 }
 
 .form__textarea {
     outline: none;
-     cursor: pointer;
+    cursor: pointer;
     resize: none;
     padding: 12px 18px;
-   
+
     height: 120px;
 
     transition: border-color $time $timing-function;
@@ -157,8 +157,8 @@ transition: border-color $time $timing-function;
     border-radius: 4px;
     background-color: $bg-color;
 
-    &:hover, 
-&:focus {
-    border: 1px solid $link-hover-color;
-}
+    &:hover,
+    &:focus {
+        border: 1px solid $link-hover-color;
+    }
 }

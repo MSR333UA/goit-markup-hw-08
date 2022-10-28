@@ -7,8 +7,10 @@
 
   &:hover,
   &:focus {
-    background-color: rgba(0, 0, 0, 0.1);
+    fill: $link-hover-color;
+    transition: fill $time $timing-function;
   }
+
   @media screen and (min-width: 768px) {
     display: none;
   }
@@ -29,12 +31,15 @@
 .menu__toggle .menu__icon-cross {
   display: block;
 }
+
 .menu__toggle .menu__icon-menu {
   display: none;
 }
+
 .menu__toggle.js-open-menu .menu__icon-cross {
   display: none;
 }
+
 .menu__toggle.js-open-menu .menu__icon-menu {
   display: block;
 }
@@ -69,7 +74,7 @@
   gap: 65px;
 }
 
-.contact-mobile, 
+.contact-mobile,
 .menu-mobile {
   @extend %list;
 
@@ -140,5 +145,3 @@
   transform: rotate(90deg);
   margin: 0 10px;
 }
-
-
