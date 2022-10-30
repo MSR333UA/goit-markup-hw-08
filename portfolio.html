@@ -21,15 +21,22 @@
     <!-- Шапка сторінки -->
     <header>
       <!-- Меню навігації -->
+
       <div class="header container">
         <nav class="header-nav">
           <a class="logo" lang="en" href="./index.html">Web<span class="logo-part">Studio</span></a>
+          <button class="menu__toggle js-open-menu" type="button">
+            <svg width="40" height="40" aria-label="Перемикач мобільного меню">
+              <use class="menu__icon-cross" href="./images/symbol-defs.svg#icon-close_40px"></use>
+              <use class="menu__icon-menu" href="./images/symbol-defs.svg#icon-menu"></use>
+            </svg>
+          </button>
           <ul class="site-nav">
             <li class="site-nav__item">
               <a class="site-nav__link" href="./index.html">Студія</a>
             </li>
-            <li class="site-nav__item">
-              <a class="site-nav__link site-nav__link--active" href="./portfolio.html">Портфоліо</a>
+            <li class="site-nav__item site-nav__link--active">
+              <a class="site-nav__link" href="./portfolio.html">Портфоліо</a>
             </li>
             <li class="site-nav__item">
               <a class="site-nav__link" href="#">Контакти</a>
@@ -39,14 +46,14 @@
         <ul class="contact">
           <li class="contact__item">
             <a class="contact__link" href="mailto:info@devstudio.com">
-              <svg class="contac__icon" width="16" height="12">
+              <svg class="contac__icon" width="14" height="10">
                 <use href="./images/symbol-defs.svg#icon-envelope"></use></svg
               >info@devstudio.com</a
             >
           </li>
           <li class="contact__item">
             <a class="contact__link" href="tel:+380961111111">
-              <svg class="contac__icon" width="10" height="16">
+              <svg class="contac__icon-phone" width="10" height="14">
                 <use href="./images/symbol-defs.svg#icon-smartphone"></use></svg
               >+38 096 111 11 11</a
             >
@@ -54,7 +61,9 @@
         </ul>
       </div>
     </header>
+
     <!-- Унікальний контент -->
+
     <main>
       <section class="sections">
         <div class="container">
@@ -85,14 +94,29 @@
             <li class="card-set__item">
               <a href="#" class="card-set__link">
                 <div class="overlay">
-                  <img src="./images/tehno.jpg" alt="Ноутбук з картками людей" width="370" />
+                  <picture>
+                    <source
+                      srcset="./images/1img.jpg 1x, ./images/1img@2x.jpg 2x"
+                      media="(max-width:767px)"
+                    />
+                    <source
+                      srcset="./images/1img768.jpg 1x, ./images/1img768@2x.jpg 2x"
+                      media="(max-width:1199px)"
+                    />
+                    <source
+                      srcset="./images/1img1600.jpg 1x, ./images/1img1600@2x.jpg 2x"
+                      media="(min-width:1200px)"
+                    />
+
+                    <img src="./images/1img.jpg" alt="Ноутбук з картками людей" />
+                  </picture>
                   <p class="overlay__desc">
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                     Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
                     приватну особу.
                   </p>
                 </div>
-                <div class="card-set__box">
+                <div class="card-set__box card-set__box--bottom">
                   <h2 class="card-set__title">Технокряк</h2>
                   <p class="card-set__text">Веб-сайт</p>
                 </div>
@@ -101,11 +125,23 @@
             <li class="card-set__item">
               <a href="#" class="card-set__link">
                 <div class="overlay">
-                  <img
-                    src="./images/poster.jpg"
-                    alt="Постер New Orlean vs Golden Star"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="./images/2img.jpg 1x, ./images/2img@2x.jpg 2x"
+                      media="(max-width:767px)"
+                    />
+                    <source
+                      srcset="./images/2img768.jpg 1x, ./images/2img768@2x.jpg 2x"
+                      media="(max-width:1199px)"
+                    />
+                    <source
+                      srcset="./images/2img1600.jpg 1x, ./images/2img1600@2x.jpg 2x"
+                      media="(min-width:1200px)"
+                    />
+
+                    <img src="./images/2img.jpg" alt="Постер New Orlean vs Golden Star" />
+                  </picture>
+
                   <p class="overlay__desc">
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                     Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
@@ -121,7 +157,22 @@
             <li class="card-set__item">
               <a href="#" class="card-set__link">
                 <div class="overlay">
-                  <img src="./images/restoran.jpg" alt="Емблема ресторану Seafood" width="370" />
+                  <picture>
+                    <source
+                      srcset="./images/3img.jpg 1x, ./images/3img@2x.jpg 2x"
+                      media="(max-width:767px)"
+                    />
+                    <source
+                      srcset="./images/3img768.jpg 1x, ./images/3img768@2x.jpg 2x"
+                      media="(max-width:1199px)"
+                    />
+                    <source
+                      srcset="./images/3img1600.jpg 1x, ./images/3img1600@2x.jpg 2x"
+                      media="(min-width:1200px)"
+                    />
+
+                    <img src="./images/3img.jpg" alt="Емблема ресторану Seafood" />
+                  </picture>
 
                   <p class="overlay__desc">
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -138,7 +189,22 @@
             <li class="card-set__item">
               <a href="#" class="card-set__link">
                 <div class="overlay">
-                  <img src="./images/prime.jpg" alt="Наушники" width="370" />
+                  <picture>
+                    <source
+                      srcset="./images/4img.jpg 1x, ./images/4img@2x.jpg 2x"
+                      media="(max-width:767px)"
+                    />
+                    <source
+                      srcset="./images/4img768.jpg 1x, ./images/4img768@2x.jpg 2x"
+                      media="(max-width:1199px)"
+                    />
+                    <source
+                      srcset="./images/4img1600.jpg 1x, ./images/4img1600@2x.jpg 2x"
+                      media="(min-width:1200px)"
+                    />
+
+                    <img src="./images/4img.jpg" alt="Наушники" />
+                  </picture>
 
                   <p class="overlay__desc">
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -155,7 +221,22 @@
             <li class="card-set__item">
               <a href="#" class="card-set__link">
                 <div class="overlay">
-                  <img src="./images/boxes.jpg" alt="Подарункові коробки" width="370" />
+                  <picture>
+                    <source
+                      srcset="./images/5img.jpg 1x, ./images/5img@2x.jpg 2x"
+                      media="(max-width:767px)"
+                    />
+                    <source
+                      srcset="./images/5img768.jpg 1x, ./images/5img768@2x.jpg 2x"
+                      media="(max-width:1199px)"
+                    />
+                    <source
+                      srcset="./images/5img1600.jpg 1x, ./images/5img1600@2x.jpg 2x"
+                      media="(min-width:1200px)"
+                    />
+
+                    <img src="./images/5img.jpg" alt="Подарункові коробки" />
+                  </picture>
 
                   <p class="overlay__desc">
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -172,7 +253,22 @@
             <li class="card-set__item">
               <a href="#" class="card-set__link">
                 <div class="overlay">
-                  <img src="./images/borders.jpg" alt="Монітор" width="370" />
+                  <picture>
+                    <source
+                      srcset="./images/6img.jpg 1x, ./images/6img@2x.jpg 2x"
+                      media="(max-width:767px)"
+                    />
+                    <source
+                      srcset="./images/6img768.jpg 1x, ./images/6img768@2x.jpg 2x"
+                      media="(max-width:1199px)"
+                    />
+                    <source
+                      srcset="./images/6img1600.jpg 1x, ./images/6img1600@2x.jpg 2x"
+                      media="(min-width:1200px)"
+                    />
+
+                    <img src="./images/6img.jpg" alt="Монітор" />
+                  </picture>
 
                   <p class="overlay__desc">
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -189,7 +285,22 @@
             <li class="card-set__item">
               <a href="#" class="card-set__link">
                 <div class="overlay">
-                  <img src="./images/lm.jpg" alt="Журнал" width="370" />
+                  <picture>
+                    <source
+                      srcset="./images/7img.jpg 1x, ./images/7img@2x.jpg 2x"
+                      media="(max-width:767px)"
+                    />
+                    <source
+                      srcset="./images/7img768.jpg 1x, ./images/7img768@2x.jpg 2x"
+                      media="(max-width:1199px)"
+                    />
+                    <source
+                      srcset="./images/7img1600.jpg 1x, ./images/7img1600@2x.jpg 2x"
+                      media="(min-width:1200px)"
+                    />
+
+                    <img src="./images/7img.jpg" alt="Журнал" />
+                  </picture>
 
                   <p class="overlay__desc">
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -206,7 +317,22 @@
             <li class="card-set__item">
               <a href="#" class="card-set__link">
                 <div class="overlay">
-                  <img src="./images/lab.jpg" alt="Бірка проекту LAB" width="370" />
+                  <picture>
+                    <source
+                      srcset="./images/8img.jpg 1x, ./images/8img@2x.jpg 2x"
+                      media="(max-width:767px)"
+                    />
+                    <source
+                      srcset="./images/8img768.jpg 1x, ./images/8img768@2x.jpg 2x"
+                      media="(max-width:1199px)"
+                    />
+                    <source
+                      srcset="./images/8img1600.jpg 1x, ./images/8img1600@2x.jpg 2x"
+                      media="(min-width:1200px)"
+                    />
+
+                    <img src="./images/8img.jpg" alt="Бірка проекту LAB" />
+                  </picture>
 
                   <p class="overlay__desc">
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -223,11 +349,22 @@
             <li class="card-set__item">
               <a href="#" class="card-set__link">
                 <div class="overlay">
-                  <img
-                    src="./images/growing.jpg"
-                    alt="Людина читає за ноутбуком про Growing"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="./images/9img.jpg 1x, ./images/9img@2x.jpg 2x"
+                      media="(max-width:767px)"
+                    />
+                    <source
+                      srcset="./images/9img768.jpg 1x, ./images/9img768@2x.jpg 2x"
+                      media="(max-width:1199px)"
+                    />
+                    <source
+                      srcset="./images/9img1600.jpg 1x, ./images/9img1600@2x.jpg 2x"
+                      media="(min-width:1200px)"
+                    />
+
+                    <img src="./images/9img.jpg" alt="Людина читає за ноутбуком про Growing" />
+                  </picture>
 
                   <p class="overlay__desc">
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -320,5 +457,41 @@
         </div>
       </div>
     </footer>
+
+    <div class="menu__container js-menu-container" id="menu__mobile">
+      <button class="menu__toggle js-close-menu">
+        <svg width="40" height="40" aria-label="Перемикач мобільного меню">
+          <use class="menu__icon-cross" href="./images/symbol-defs.svg#icon-close_40px"></use>
+          <use class="menu__icon-menu" href="./images/symbol-defs.svg#icon-menu"></use>
+        </svg>
+      </button>
+
+      <ul class="menu-mobile">
+        <li>
+          <a class="menu-mobile__list menu-mobile__list--active" href="./index.html">Студія</a>
+        </li>
+        <li><a class="menu-mobile__list" href="./portfolio.html">Портфоліо</a></li>
+        <li><a class="menu-mobile__list" href="#">Контакти</a></li>
+      </ul>
+      <div class="contact-box">
+        <ul class="contact-mobile">
+          <li class="contact-mobile__item">
+            <a class="contact-mobile__link contact-mobile__link--number" href="tel:+380961111111"
+              >+38 096 111 11 11</a
+            >
+          </li>
+          <li class="contact-mobile__item">
+            <a class="contact-mobile__link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+          </li>
+        </ul>
+        <ul class="menu-social">
+          <li><a class="menu-social__link" href="#">Instagram</a> <span class="element"></span></li>
+          <li><a class="menu-social__link" href="#">Twitter</a><span class="element"></span></li>
+          <li><a class="menu-social__link" href="#">Facebook</a><span class="element"></span></li>
+          <li><a class="menu-social__link" href="#">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
